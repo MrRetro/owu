@@ -1,9 +1,11 @@
 {
   "name": "owu",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "owu 脚手架 初始化项目 基于vue",
   "main": "index.js",
-  "bin": "owu",
+  "bin": {
+    "owu": "bin/owu"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
