@@ -5,7 +5,7 @@ let templates = require("../templates");
 let download = require('download-git-repo');
 let ora = require('ora');
 let fs  = require('fs');
-let util  = require('./download/utils/index.js')
+let utils = require('./utils');
 let temps = {};
 let temps2 = {};
 module.exports = function(name) {
@@ -24,7 +24,7 @@ function getTemps(templates) {
 let generator = function *(name) {
         let tempName  = name;
         let path = temps2[name];
-        if(!name) {
+        if(typeof tempName !== 'string') {
            console.log('    可用模板列表:')
            for(let key in temps) {
                 let tempName = temps[key]
@@ -51,11 +51,11 @@ let generator = function *(name) {
     }
 
 function downloadTemplates(path,projectName) {
-        let spanner = ora("   正在构建，客官請稍等......");
+        let spanner = ora("   正在构建，客官请稍等......");
         spanner.start();
         if(fs.existsSync('download')){
             //刪除原文件
-            util.rmdirSync('download');
+            utils.rmdirSync('download');
         }
         download(path,__dirname+'/download', function(err) {            
                 if(err) {
@@ -71,7 +71,7 @@ function downloadTemplates(path,projectName) {
 
 function startBuildProject(spanner,projectName){
     let targetPath = process.cwd()+"/"+projectName
-    util.copyDirSync(__dirname+'/download',targetPath)
+    utils.copyDirSync(__dirname+'/download',targetPath)
     console.log('    ','----------------------------------------')
     console.log('    ',chalk.green('★'),chalk.green('项目构建成功'));
     spanner.stop();

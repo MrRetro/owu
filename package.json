@@ -1,6 +1,6 @@
 {
   "name": "owu",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "owu 脚手架 初始化项目 基于vue",
   "main": "index.js",
   "bin": {
@@ -23,10 +23,8 @@
     "chalk": "^2.4.2",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
-    "commander": "^2.19.0"
-  },
-  "dependencies": {
+    "commander": "^2.19.0",
     "download-git-repo": "^1.1.0",
-    "ora": "^3.2.0"
+    "ora": "^3.3.0"
   }
 }
