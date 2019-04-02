@@ -1,0 +1,30 @@
+{
+  "name": "owu",
+  "version": "1.0.5",
+  "description": "owu 脚手架 初始化项目 基于vue",
+  "main": "index.js",
+  "bin": "owu",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrRetro/owu.git"
+  },
+  "author": "retro_mr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrRetro/owu/issues"
+  },
+  "homepage": "https://github.com/MrRetro/owu#readme",
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.19.0"
+  },
+  "dependencies": {
+    "download-git-repo": "^1.1.0",
+    "ora": "^3.2.0"
+  }
+}
